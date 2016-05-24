@@ -22,3 +22,9 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+# javascript
+node_modules
+.DS_STORE
+dist
+build

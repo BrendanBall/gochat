@@ -1,0 +1,11 @@
+<template>
+  <section class="au-animate">
+    <h1>
+      hello
+    </h1>
+    <select>
+      <option repeat.for="device of devices">${device.label}</option>
+    </select>
+    <video autoplay src.bind="src"></video>
+  </section>
+</template>
