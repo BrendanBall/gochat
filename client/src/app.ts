@@ -1,5 +1,10 @@
+import {Aurelia} from 'aurelia-framework';
+import {Router, RouterConfiguration} from 'aurelia-router';
+
 export class App {
-  configureRouter(config, router) {
+  router: Router;
+
+  configureRouter(config: RouterConfiguration, router: Router) {
     config.title = 'GoChat';
     config.map([
       { route: ['', 'call'], name: 'call', moduleId: 'call', nav: true, title: 'call' },
