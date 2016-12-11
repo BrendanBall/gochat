@@ -1,5 +1,6 @@
 import {Aurelia} from 'aurelia-framework';
 import {Router, RouterConfiguration} from 'aurelia-router';
+import 'materialize-css';
 
 export class App {
   router: Router;
