@@ -79,6 +79,14 @@ let config = generateConfig(
     output: {
       path: outDir,
     },
+    module: {
+      loaders: [
+        {
+          test: /\.scss$/,
+          loaders: ["style-loader", "css-loader", "sass-loader"]
+        }
+      ]
+    },
   },
 
   /**
@@ -96,7 +104,7 @@ let config = generateConfig(
   aurelia({root: rootDir, src: srcDir, title: title, baseUrl: baseUrl}),
   typescript(ENV !== 'test' ? {} : { options: { doTypeCheck: false, sourceMap: false, inlineSourceMap: true, inlineSources: true } }),
   html(),
-  css({ filename: 'styles.css', allChunks: true, sourceMap: false }),
+  css({ filename: 'styles.scss', allChunks: true, sourceMap: false }),
   fontAndImages(),
   globalBluebird(),
   globalJquery(),
