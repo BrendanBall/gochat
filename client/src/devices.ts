@@ -1,4 +1,3 @@
-import "../node_modules/webrtc-adapter/out/adapter.js"
 
 export class Devices {
   devices: MediaDeviceInfo[] = [];

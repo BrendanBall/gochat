@@ -1,23 +1,28 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es6",
-    "module": "es2015",
+    "sourceMap": true,
+    "target": "es5",
+    "module": "amd",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "strictNullChecks": true,
     "moduleResolution": "node",
-    "sourceMap": true,
-    "allowJs": true,
-    "types": ["webrtc"],
-    "lib": [
-      "es6", "es2017", "dom"
-    ]
-  },
-  "awesomeTypescriptLoaderOptions": {
-    "forkChecker": true
+    "lib": ["es2015", "dom"],
+    "types" : ["webrtc"]
   },
   "exclude": [
-    "node_modules",
-    "dist"
-  ]
+    "node_modules"
+  ],
+  "filesGlob": [
+    "./src/**/*.ts",
+    "./test/**/*.ts",
+    "./typings/index.d.ts",
+    "./custom_typings/**/*.d.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": false
+  }
 }
