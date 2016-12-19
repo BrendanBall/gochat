@@ -8,7 +8,7 @@ export class VideoStreamCustomElement {
 
   activate() {
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
-      .then((localMediaStream) => this.src = window.URL.createObjectURL(localMediaStream))
-      .catch((e) => console.log(e));
+      .then(localMediaStream => this.src = window.URL.createObjectURL(localMediaStream))
+      .catch(e => console.log(e));
   }
 }

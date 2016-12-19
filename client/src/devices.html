@@ -1,5 +1,10 @@
 <template>
-  <select>
-      <option repeat.for="device of devices">${device.label}</option>
-  </select>
+  <h1>Devices</h1>
+  <div class="row">
+    <div class="col s4">
+      <select md-select>
+        <option repeat.for="device of devices">${device.label}</option>
+      </select>
+    </div>
+  </div>
 </template>
